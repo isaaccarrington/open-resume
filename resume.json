@@ -3,14 +3,33 @@
         "name"    : "Isaac Carrington",
         "phone"   : 64221234567,
         "email"   : "banana@outlook.com",
-        "address" : "1 big walk way, New Zealand"
+        "address" : "1 big walk way, New Zealand",
+        "links"   : [
+            { "name": "github", "link": "https://github.com/isaaccarrington" },
+            { "name": "linkedin", "link": "https://www.linkedin.com/in/isaac-carrington-b82a75168" }
+        ]
     },
-    "education": [
+    "personal-accomplishments": [
         {
-            "provider"    : "Massey University",
-            "country"     : "New Zealand",
-            "dates"       : "Feb 2012 - Nov 14",
-            "achievement" : "Bachelor of Information Science"
+            "accomplishment": "Developed Mahi, an IOS app for tracking gym workouts. This has a supporting website hosted in AWS",
+            "skills": [
+                "SwiftUI",
+                "AWS",
+                "Terraform",
+                "User Experience Design"
+            ],
+            "attributes": [],
+            "links": [
+                { "name": "App Store Link", "link": "https://apps.apple.com/nz/app/mahi/id1665887338" },
+                { "name": "Website", "link": "https://mahiapp.co.nz/" }
+            ]
+        }
+    ],
+    "certifications": [
+        {
+            "name": "example kubernetes certification",
+            "date-achieved": "16th Feb 2023",
+            "status": "current"
         }
     ],
     "work-experience": [
@@ -63,5 +82,13 @@
                 }
             ]
         }
-    ] 
+    ],
+    "education": [
+        {
+            "provider"    : "Massey University",
+            "country"     : "New Zealand",
+            "dates"       : "Feb 2012 - Nov 14",
+            "achievement" : "Bachelor of Information Science"
+        }
+    ]
 }

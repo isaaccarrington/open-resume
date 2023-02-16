@@ -2,92 +2,198 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "type": "object",
     "properties": {
-      "person": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "phone": {
-            "type": "integer"
-          },
-          "email": {
-            "type": "string",
-            "format": "email"
-          },
-          "address": {
-            "type": "string"
-          }
+        "person": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "phone": {
+                    "type": "integer"
+                },
+                "email": {
+                    "type": "string",
+                    "format": "email"
+                },
+                "address": {
+                    "type": "string"
+                },
+                "links": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "link": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "link"
+                        ]
+                    }
+                }
+            },
+            "required": [
+                "name",
+                "phone",
+                "email",
+                "address"
+            ]
         },
-        "required": ["name", "phone", "email", "address"]
-      },
-      "education": {
-        "type": "array",
-        "items": {
-          "type": "object",
-          "properties": {
-            "provider": {
-              "type": "string"
-            },
-            "country": {
-              "type": "string"
-            },
-            "dates": {
-              "type": "string"
-            },
-            "achievement": {
-              "type": "string"
-            }
-          },
-          "required": ["provider", "country", "dates", "achievement"]
-        }
-      },
-      "work-experience": {
-        "type": "array",
-        "items": {
-          "type": "object",
-          "properties": {
-            "role": {
-              "type": "string"
-            },
-            "company": {
-              "type": "string"
-            },
-            "responsibilities": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            },
-            "accomplishments": {
-              "type": "array",
-              "items": {
+        "personal-accomplishments": {
+            "type": "array",
+            "items": {
                 "type": "object",
                 "properties": {
-                  "accomplishment": {
-                    "type": "string"
-                  },
-                  "skills": {
-                    "type": "array",
-                    "items": {
-                      "type": "string"
+                    "accomplishment": {
+                        "type": "string"
+                    },
+                    "skills": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "attributes": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "links": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "name": {
+                                    "type": "string"
+                                },
+                                "link": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            },
+                            "required": [
+                                "name",
+                                "link"
+                            ]
+                        }
                     }
-                  },
-                  "attributes": {
-                    "type": "array",
-                    "items": {
-                      "type": "string"
-                    }
-                  }
                 },
-                "required": ["accomplishment", "skills"]
-              }
+                "required": [
+                    "accomplishment",
+                    "skills"
+                ]
             }
-          },
-          "required": ["role", "company", "responsibilities", "accomplishments"]
+        },
+        "certifications": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "date-achieved": {
+                        "type": "string"
+                    },
+                    "status": {
+                        "type": "string",
+                        "enum": [
+                            "current",
+                            "expired"
+                        ]
+                    }
+                },
+                "required": [
+                    "name",
+                    "date-achieved",
+                    "status"
+                ]
+            }
+        },
+        "work-experience": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "role": {
+                        "type": "string"
+                    },
+                    "company": {
+                        "type": "string"
+                    },
+                    "responsibilities": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "accomplishments": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "accomplishment": {
+                                    "type": "string"
+                                },
+                                "skills": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string"
+                                    }
+                                },
+                                "attributes": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string"
+                                    }
+                                }
+                            },
+                            "required": [
+                                "accomplishment",
+                                "skills"
+                            ]
+                        }
+                    }
+                },
+                "required": [
+                    "role",
+                    "company",
+                    "responsibilities"
+                ]
+            }
+        },
+        "education": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "provider": {
+                        "type": "string"
+                    },
+                    "country": {
+                        "type": "string"
+                    },
+                    "dates": {
+                        "type": "string"
+                    },
+                    "achievement": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "provider",
+                    "country",
+                    "dates",
+                    "achievement"
+                ]
+            }
         }
-      }
-    },
-    "required": ["person", "education", "work-experience"]
-  }
-  
+    }
+}
