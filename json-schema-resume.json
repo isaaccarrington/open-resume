@@ -1,0 +1,93 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+      "person": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "integer"
+          },
+          "email": {
+            "type": "string",
+            "format": "email"
+          },
+          "address": {
+            "type": "string"
+          }
+        },
+        "required": ["name", "phone", "email", "address"]
+      },
+      "education": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "provider": {
+              "type": "string"
+            },
+            "country": {
+              "type": "string"
+            },
+            "dates": {
+              "type": "string"
+            },
+            "achievement": {
+              "type": "string"
+            }
+          },
+          "required": ["provider", "country", "dates", "achievement"]
+        }
+      },
+      "work-experience": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "role": {
+              "type": "string"
+            },
+            "company": {
+              "type": "string"
+            },
+            "responsibilities": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "accomplishments": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "accomplishment": {
+                    "type": "string"
+                  },
+                  "skills": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "attributes": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "required": ["accomplishment", "skills"]
+              }
+            }
+          },
+          "required": ["role", "company", "responsibilities", "accomplishments"]
+        }
+      }
+    },
+    "required": ["person", "education", "work-experience"]
+  }
+  

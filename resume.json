@@ -1,0 +1,67 @@
+{
+    "person": {
+        "name"    : "Isaac Carrington",
+        "phone"   : 64221234567,
+        "email"   : "banana@outlook.com",
+        "address" : "1 big walk way, New Zealand"
+    },
+    "education": [
+        {
+            "provider"    : "Massey University",
+            "country"     : "New Zealand",
+            "dates"       : "Feb 2012 - Nov 14",
+            "achievement" : "Bachelor of Information Science"
+        }
+    ],
+    "work-experience": [
+        {
+            "role"      : "Chapter Area Lead (Head of) Platform Engineering",
+            "company"   : "Westpac New Zealand",
+            "responsibilities" : [
+                "Line management of chapter leads and chapter engineers",
+                "Coaching and mentoring",
+                "People capacity strategy and analysis",
+                "Chapter skills gap analysis and training",
+                "Platform reliability and resilience strategy",
+                "Strategies to improve craft consistency",
+                "Discovery of emerging trends and applying them to Westpac"
+            ],
+            "accomplishments": [
+                {
+                    "accomplishment": "Architected and built a Jetbrains floating license server on RHEL with Terraform, Jenkins, Chef, and Dynatrace",
+                    "skills": [
+                        "Terraform",
+                        "Jenkins",
+                        "Chef",
+                        "Dynatrace"
+                    ],
+                    "attributes": []
+                },
+                {
+                    "accomplishment": "Contributed to a best practice code example and documentation for provisioning RHEL on-prem",
+                    "skills": [
+                        "Linux",
+                        "Documentation",
+                        "Chef",
+                        "Dynatrace"
+                    ],
+                    "attributes": [
+                        "Leadership"
+                    ]
+                },
+                {
+                    "accomplishment": "Architected and built a career ladder tool that was deployed on kubernetes using Helm, Jenkins, and Dynatrace. In the overall solution I also used power automate for form submission",
+                    "skills": [
+                        "Jenkins",
+                        "Kubernetes",
+                        "Dynatrace",
+                        "Architecture"
+                    ],
+                    "attributes": [
+                        "Leadership"
+                    ]
+                }
+            ]
+        }
+    ] 
+}
